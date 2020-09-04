@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'ApexBook';
+  src: url("./fonts/ApexNew-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: 'ApexBookItalic';
+  src: url("./fonts/ApexNew-BookItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: 'ApexMedium';
+  src: url("./fonts/ApexNew-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: 'ApexV2Bold';
+  src: url("./fonts/ApexNew-V2-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'ApexV2BoldItalic';
+  src: url("./fonts/ApexNew-V2-BoldItalic.otf") format("opentype");
+}
+
+$red: #BC204B;
+$black: #333;
+$white: #fff;
+$light-grey: #EDEFF0;
+$dark-grey: #707070;
+$titlesFont: Apex;
+$titleSize: 92px;
+$titleSizeMobile: 72px;
+$subTitleSize: 32px;
+$headerButtonTextSize: 28px;
+$contentButtonTextSize: 20px;
+$paragraphFont: Lato;
+$paragraphSize: 22px;
+
+body {
+  margin: 0;
+  font-family: 'ApexBook', 'ApexBookItalic', 'ApexMedium', 'ApexV2Bold', 'ApexV2BoldItalic', Arial, Helvetica, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  &:hover {
+    background-color: $white;
+    color: $red;
+    border: 3px solid $red;
+  }
+  &:focus {
+    outline:0;
+  }
+  background: $red;
+  border-color: $red;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  border: 3px solid $red;
+  text-decoration: none;
+  text-align: center;
+  transition: .25s ease-in-out;
+  cursor: pointer;
+  font-size: $contentButtonTextSize;
+  display: block;
+}
+
+header {
+  h1 {
+    font-size: $titleSize;
+    text-align: left;
+    font-family: "ApexBook";
+  }
+  button {
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border: 3px solid $white;
+    }
+    &:focus {
+      outline:0;
+    }
+    background-color: transparent;
+    color: $white;
+    border-radius: 3px;
+    padding: 1.5rem 5.5rem 1.5rem 5.5rem;
+    border: 3px solid;
+    text-decoration: none;
+    text-align: center;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+    line-height: 1.4rem;
+    font-size: $headerButtonTextSize;
+    display: block;
+  }
+  p {
+    text-align: left;
+    font-size: $subTitleSize;
+    font-family: 'ApexMedium';
+  }
+  a {
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .titleWrapper {
+    padding-right: 13%;
+  }
+  background: url('./images/homepage_hero-lg-xhdpi.jpg');
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.content {
+  p {
+    font-size: $paragraphSize;
+    margin: 40px 0;
+  }
+  .left-content {
+    text-align: left;
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+  }
+  .right-content {
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+  }
+  line-height: 1.4;
+  width: 1024px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+footer {
+  a {
+    text-decoration: none;
+    color: $dark-grey;
+    padding: 25px 100px;
+    font-size: $subTitleSize;
+  }
+  .footer-links {
+    border-bottom: 1px solid $dark-grey;
+    padding: 30px;
+  }
+  h3 {
+    padding: 40px;
+    margin: 0;
+  }
+  background-color: $light-grey;
+  color: $dark-grey;
+}
+
+.login {
+  button {
+    margin: auto;
+  }
+}
+
+.logout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.watch {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(0, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(0, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.order {
+  h2 {
+    text-align: center;
+  }
+  .total-price {
+    position: absolute;
+    bottom: 65px;
+    font-family: 'ApexV2BoldItalic';
+  }
+  button {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    position: absolute;
+    bottom: 30px;
+  }
+  position: relative;
+  width: 400px;
+  float: left;
+  background-color: $light-grey;
+  min-height: 400px;
+  text-align: left;
+  padding: 30px 40px;
+  margin: 20px 50px;
+}
+
+.tracking {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    h1 {
+      font-size: $titleSizeMobile;
+      text-align: center;
+    }
+    button {
+      margin: auto;
+    }
+    p {
+      text-align: center;
+    }
+    .titleWrapper {
+      padding-right: 0;
+    }
+    background: url('./images/homepage_hero-sm-xhdpi.jpg');
+    background-size: cover;
+  }
+
+  .content {
+    button {
+      margin: auto;
+    }
+    p {
+      font-size: $paragraphSize;
+      margin: 40px 0;
+    }
+    .left-content {
+      text-align: center;
+      width: 100%;
+    }
+    .right-content {
+      width: 100%;
+    }
+    width: 100%;
+    margin: auto;
+    padding: 100px 0;
+  }
+
+  footer {
+    a {
+      padding: 25px 30px;
+      font-size: $subTitleSize;
+    }
+    p {
+      font-weight: bold;
+    }
+    .lang {
+      padding-bottom: 20px;
+    }
+  }
+
+  .order {
+    width: 300px;
+  }
+}
