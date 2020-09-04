@@ -18,7 +18,7 @@ This will open the app in the browser at `http://localhost:3000`
 ## Routes
 The app exposes 3 route paths: 
 
-`/`: Root will open up the homepage ( the page given by the designers in the form of mockups).
+`/`: Root will open up the homepage ( the page given by the designers in the form of mockups - I added a vibrating animation to the watch to mimic the watch notifying about potential seizures).
 
 Clicking on the "Buy Now" button will redirect you to the /login page ( I did that so there's a way to navigate between all pages )
 
